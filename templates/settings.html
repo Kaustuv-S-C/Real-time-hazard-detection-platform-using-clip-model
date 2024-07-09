@@ -1,0 +1,37 @@
+<!-- templates/settings.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+  </head>
+
+  <body class="settings">
+    <h1 id="set">
+      <img
+        src="{{ url_for('static', filename='settings_logo.png') }}"
+        alt="Settings Logo"
+        class="setting-logo"
+        height="20px"
+        width="30px"
+      />
+      Settings
+    </h1>
+    <div id="header">
+      <!-- Logout button -->
+      <a href="{{ url_for('logout') }}"
+        ><button id="logoutBtn">Logout</button></a
+      >
+      <!-- Back to main page link -->
+      <a href="{{ url_for('welcome', username=username) }}"
+        ><h2>Back to main page</h2></a
+      >
+    </div>
+    <form action="/stop_capture" method="post">
+      <input type="submit" value="Stop Capture" />
+    </form>
+  </body>
+</html>

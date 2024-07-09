@@ -1,0 +1,34 @@
+model-settings:
+  prediction-threshold: 0.23  # max value of cosine similarity can be 1
+  model-name: 'ViT-B/32'
+  device: 'cpu'
+
+label-settings:
+  labels: # labels that can be predicted if model's confidence is more than "prediction-threshold"
+    # Existing Hazard detection in industrial environments
+    - 'fire'
+    - 'explosion'
+    - 'personel with no PPE'
+    - 'unconscious person'
+    - 'cigarette'
+    - 'smoke'
+    - 'fight'
+    - 'gun'
+    - 'knife'
+    - 'dog'
+    - 'cat'
+    - 'bird'
+    - 'sos hand signals'
+    - 'spill'
+    - 'electrical flash'
+    - 'machinery malfunction'
+    - 'slippery surface'
+    - 'broken equipment'
+    - 'overheating equipment'
+    - 'sharp object'
+    - 'overcrowding'
+    - 'vehicle collision'
+    - 'equipment malfunction'
+    - 'high pressure release'
+    - 'structural damage'
+  default-label: 'Normal' # value to return if model's confidence is less than "prediction-threshold"

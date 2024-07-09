@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <style>
+      /* Style for  detected message */
+      .hazard {
+        color: red;
+        font-size: 36px; /* Adjust the font size as needed */
+      }
+    </style>
+  </head>
+  <body class="back_dash">
+    <h1 id="dash_color">For User: {{ username }}</h1>
+    <div id="header2">
+      <!-- Logout button -->
+      <a href="{{ url_for('logout') }}"
+        ><button id="logoutBtn">Logout</button></a
+      >
+      <!-- Back to main page link -->
+      <a href="{{ url_for('welcome', username=username) }}"
+        ><h2>Back to main page</h2></a
+      >
+    </div>
+
+    <!-- Display detected hazards -->
+    {% for hazard in detected_hazards %}
+    <div class="hazard">
+      <p>{{ hazard }}</p>
+    </div>
+    {% endfor %}
+
+    <script>
+      // Reload the page after 8 seconds
+      setTimeout(function () {
+        location.reload();
+      }, 8000);
+    </script>
+  </body>
+</html>

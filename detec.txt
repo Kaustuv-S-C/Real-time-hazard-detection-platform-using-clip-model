@@ -1,0 +1,6 @@
+fight (Current Confidence: 18.31) detected at: 2024-04-04 09:58:18
+gun (Current Confidence: 4.11) detected at: 2024-04-04 10:00:30
+sharp object (Current Confidence: 17.23) detected at: 2024-04-04 17:17:14
+electrical flash (Current Confidence: 23.74) detected at: 2024-04-04 17:17:17
+fire (Current Confidence: 26.86) detected at: 2024-04-04 17:18:15
+personel with no PPE (Current Confidence: 35.91) detected at: 2024-04-04 17:18:58

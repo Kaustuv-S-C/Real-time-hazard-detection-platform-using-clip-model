@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Industrial Safety System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+
+  <body class="back">
+    <div id="header">
+      <a href="{{ url_for('logout') }}"
+        ><button id="logoutBtn"><b>Logout</b></button></a
+      >
+      <a href="{{ url_for('welcome', username=username) }}"
+        ><h2 style="color: aliceblue">Back to main page</h2></a
+      >
+      <h1 style="color: yellow">
+        Contact Us - Industrial Safety System
+        <img
+          src="{{ url_for('static', filename='phone.png') }}"
+          alt=""
+          height="80px"
+          ;
+          width="60px"
+          ;
+          top="1000px"
+        />
+      </h1>
+    </div>
+
+    <div id="contact-content">
+      <div class="contact-card" id="contact_d">
+        <h2>
+          Kaustuv
+          <a class="email-link" id="dom" href="mailto:2130052@kiit.ac.in"
+            ><img src="{{ url_for('static', filename='mail.png') }}" alt="" height="20px" ;width="25px"
+          /></a>
+        </h2>
+        <a class="email-link" id="dom" href="mailto:2130052@kiit.ac.in"
+          >2130052@kiit.ac.in</a
+        >
+      </div>
+      <div class="contact-card" id="contact_d">
+        <h2>
+          Apurva
+          <a class="email-link" id="dom" href="mailto:2130044@kiit.ac.in"
+            ><img src="{{ url_for('static', filename='mail.png') }}" alt="" height="20px" ;width="25px"
+          /></a>
+        </h2>
+        <a class="email-link" id="dom" href="mailto:2130044@kiit.ac.in"
+          >2130052@kiit.ac.in</a
+        >
+      </div>
+      <div class="contact-card" id="contact_d">
+        <h2>
+          Agnick
+          <a class="email-link" id="dom" href="mailto:2130040@kiit.ac.in"
+            ><img src="{{ url_for('static', filename='mail.png') }}" alt="" height="20px" ;width="25px"
+          /></a>
+        </h2>
+        <a class="email-link" id="dom" href="mailto:2130040@kiit.ac.in"
+          >2130052@kiit.ac.in</a
+        >
+      </div>
+      <div class="contact-card" id="contact_d">
+        <h2>
+          Krishanu
+          <a class="email-link" id="dom" href="mailto:2130053@kiit.ac.in"
+            ><img src="{{ url_for('static', filename='mail.png') }}" alt="" height="20px" ;width="25px"
+          /></a>
+        </h2>
+        <a class="email-link" id="dom" href="mailto:2130053@kiit.ac.in"
+          >2130052@kiit.ac.in</a
+        >
+      </div>
+    </div>
+
+    <script>
+      function redirectToWelcome() {
+        window.location.href = "welcome.html";
+      }
+    </script>
+  </body>
+</html>

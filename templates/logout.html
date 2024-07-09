@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   </head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logout</title>
+  </head>
+  <body class="logout">
+    <div class="logout-container">
+      <h1 id="loh1">Logout</h1>
+      <p id="lo">Are you sure you want to log out?</p>
+      <form id="logout-form" action="{{ url_for('logout') }}" method="post">
+        <button class="logoutbut" type="submit" onclick="confirmLogout()">Yes, log me out</button>
+        <br>
+        <br>
+        <button class="logoutbut" type="button" onclick="cancelLogout()">No, cancel</button>
+      </form>
+    </div>
+
+    <script>
+      function confirmLogout() {
+        // Send a request to stop video capture and wait for a moment
+        fetch("/stop_capture", {
+          method: "POST",
+        }).then((response) => {
+          // Wait for 2 seconds before closing the window
+          setTimeout(() => {
+            window.close();
+          }, 2000);
+        });
+      }
+
+      function cancelLogout() {
+        // Redirect back to the previous page (e.g., dashboard)
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

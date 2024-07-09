@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazard Detection</title>
+</head>
+
+<body class="welcome">
+
+    <video autoplay muted loop id="background-video">
+     <source src="{{ url_for('static', filename='welcome.mp4') }}" type="video/mp4" />
+     Your browser does not support the video tag.
+    </video>
+    <header>
+        <nav>
+            
+            <h1 id="wel1">Welcome, {{ username }}</h1>
+            <a  href="{{ url_for('dashboard', username=username) }}"><button class="wel"><h3>Dashboard</h3></button></a>
+            <a  href="{{ url_for('settings') }}"><button class="wel"><h3>Settings</h3></button></a>
+            <a  href="{{ url_for('contact_us') }}"><button class="wel"><h3>Contact Us</h3></button></a>
+            <a  href="{{ url_for('about_us') }}"><button class="wel"><h3>About Us</h3></button></a>
+            <a  href="{{ url_for('logout') }}"><button id="logoutBtn">Logout</button></a>
+        </nav>
+    </header>
+    <div id="header1">
+        <br>
+        <br>
+        <br>
+        <h1 id="wel2">Hazard Detection</h1>
+         
+    </div>
+
+
+    <script>
+        function redirectTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+
+  <body class="home_back">
+    <video autoplay muted loop id="background-video">
+      <source src="{{ url_for('static', filename='home_video.mp4') }}" type="video/mp4"> />
+      Your browser does not support the video tag.
+    </video>
+
+    <h1 id="align">
+      <b><u>Welcome to the Hazard Detection Platform</u></b>
+    </h1>
+    <p>Explore the centralized software platform for hazard detection.</p>
+
+    <!-- Added Information -->
+    <div id="system-info">
+      <h2>Comprehensive Industrial Safety and Surveillance System</h2>
+      <p id="shift">
+        It is a comprehensive industrial safety and surveillance system designed
+        to enhance workplace safety and security. Leveraging live video streams
+        from multiple areas within an industrial environment, it utilizes
+        advanced computer vision and machine learning algorithms and IOT sensors
+        to monitor worker compliance with safety gear, detect signs of fire, gas
+        leaks, and recognize distress signals. By providing real-time alerts and
+        notifications to both workers and supervisors, It aims to minimize
+        workplace accidents, ensure prompt responses to emergencies, and improve
+        overall safety conditions in an industrial setting.
+      </p>
+
+      <h2 d="align">
+        <b><u>Key Features:</u></b>
+      </h2>
+      <ul id="shift">
+        <li>Improved Worker Safety</li>
+        <li>Early Fire Detection</li>
+        <li>Early Gas Leakage Detection</li>
+        <li>Rapid Distress Response</li>
+        <li>Real-Time Alerts</li>
+        <li>Data for Compliance</li>
+      </ul>
+
+      <h2 d="align">
+        <b><u>Conclusion:</u></b>
+      </h2>
+      <p id="shift">
+        In conclusion, It emerges as a transformative force in the realm of
+        industrial safety, representing a significant leap forward in
+        safeguarding workers and assets. Its integration of state-of-the-art
+        technologies, including computer vision, machine learning, and real-time
+        alerts, has the potential to redefine safety paradigms across diverse
+        industries. By instilling a culture of safety, ensuring compliance with
+        safety gear, detecting fire hazards, and recognizing worker distress
+        signals, It proactively mitigates risks, making workplaces safer and
+        more secure. As we navigate the path to implementing It in industrial
+        settings, we embrace the promise it holds—the promise of fewer
+        accidents, swifter responses during emergencies, and ultimately, the
+        well-being of workers and the preservation of industrial assets. It
+        stands as a testament to the enduring commitment to industrial safety
+        excellence, where innovation becomes the cornerstone of progress,
+        ushering in an era where safety is not just a practice but a way of life
+        in the industrial landscape.
+      </p>
+    </div>
+    <br />
+    <br />
+    <!-- Links for creating an account and logging in -->
+    <p>
+      Don't have an account?
+      <a href="{{ url_for('signup') }}"><button id="bt">Sign up here</button></a
+      >.
+    </p>
+    <br />
+    <p>
+      Already have an account?
+      <a href="{{ url_for('login') }}"><button id="bt">Login here</button></a>.
+    </p>
+  </body>
+</html>

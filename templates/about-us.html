@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Industrial Safety System</title>
+  </head>
+
+  <body>
+    <div id="header">
+      <a href="{{ url_for('logout') }}"
+        ><button id="logoutBtn">Logout</button></a
+      >
+      <a href="{{ url_for('welcome', username=username) }}"
+        ><h2>Back to main page</h2></a
+      >
+      <h1>About Us - Industrial Safety System</h1>
+    </div>
+
+    <div id="about-content">
+      <div class="member-card">
+        <img src="{{ url_for('static', filename='kau.png') }}" height="40px" width="40px" />
+        <h2>Kaustuv</h2>
+        <p class="member-description">
+          A 3rd year student of Kalinga Institute of Industrial Technology
+        </p>
+      </div>
+
+      <div class="member-card">
+        <img src="{{ url_for('static', filename='kri.png') }}" height="40px" width="40px" />
+        <h2>Krishanu</h2>
+        <p class="member-description">
+          A 3rd year student of Kalinga Institute of Industrial Technology
+        </p>
+      </div>
+
+      <div class="member-card">
+        <img src="{{ url_for('static', filename='apu.png') }}" height="40px" width="40px" />
+        <h2>Apurva</h2>
+        <p class="member-description">
+          A 3rd year student of Kalinga Institute of Industrial Technology
+        </p>
+      </div>
+
+      <div class="member-card">
+        <img src="{{ url_for('static', filename='agn.png') }}" height="40px" width="40px" />
+        <h2>Agnick</h2>
+        <p class="member-description">
+          A 3rd year student of Kalinga Institute of Industrial Technology
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function redirectToWelcome() {
+        window.location.href = "welcome.html";
+      }
+    </script>
+  </body>
+</html>
