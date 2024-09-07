@@ -11,18 +11,6 @@ Backend: Flask (Python)
 Frontend: HTML, CSS, JavaScript
 Real-Time Communication: WebSockets
 Hazard Detection Model: CLIP OPEN AI
-Installation
-Clone the repository:
-git clone https://github.com/yourusername/centralized-hazard-detection-platform.git
-
-Navigate to the project directory:
-cd centralized-hazard-detection-platform
-
-Install the required Python packages:
-pip install -r requirements.txt
-
-Run the Flask application:
-python app.py
 
 Open your web browser and go to http://localhost:5000 to access the platform.
 Usage
